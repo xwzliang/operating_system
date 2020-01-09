@@ -47,3 +47,12 @@ signal_out = signals.out
 signal_c = signals.c
 $(signal_out): $(signal_c)
 	gcc -o $@ $(signal_c)
+
+
+exec_out = exec.out
+exec_c = exec.c
+$(exec_out): $(exec_c)
+	gcc -o $@ $(exec_c)
+
+run4: $(exec_out)
+	./$(exec_out)
