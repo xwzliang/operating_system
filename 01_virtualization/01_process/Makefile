@@ -56,3 +56,12 @@ $(exec_out): $(exec_c)
 
 run4: $(exec_out)
 	./$(exec_out)
+
+
+exec_redirect_out = exec_redirect_output.out
+exec_redirect_c = exec_redirect_output.c
+$(exec_redirect_out): $(exec_redirect_c)
+	gcc -o $@ $(exec_redirect_c)
+
+run5: $(exec_redirect_out)
+	./$(exec_redirect_out)
